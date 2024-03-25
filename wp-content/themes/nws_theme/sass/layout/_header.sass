@@ -1,0 +1,71 @@
+@use '../utils/_utils' as utils
+
+.header
+    color: black
+    margin-bottom: 10vh
+    +utils.flex(column, flex-start, center)
+    background-color: utils.$grey
+    +utils.responsive('litle-tablet')
+        +utils.flex(row, space-between, center)
+        margin-bottom: 15vh
+
+    &__logo
+        width: 15rem
+
+    &__nav
+        +utils.flex(row, center, center)
+
+    &__nav-menu
+        display: none
+        +utils.responsive('litle-tablet')
+            display: flex
+            width: 100%
+
+    &__list
+        width: 100%
+        background-color: utils.$grey
+        +utils.flex(row, center, center)
+
+    &__nav-menu ul
+        +utils.flex(column, space-around, center)
+        height: 17vh
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, space-around, center)
+            width: 100%
+
+.current_page_item
+    color: utils.$grey-blue
+
+.page_item
+    &:hover
+        color: utils.$gold
+
+.phone-nav-svg
+    width: 1.5rem
+    fill: black
+    +utils.responsive('litle-tablet')
+        display: none
+
+    &:hover
+        cursor: pointer
+
+    &:hover
+        fill: utils.$grey-blue
+
+.show-phone-nav
+    display: flex
+
+.hide-phone-size
+    display: none
+    +utils.responsive('litle-tablet')
+        display: flex
+
+.hide-phone-nav-svg
+    display: none
+
+.hide-logo
+    opacity: 0
+    visibility: hidden
+    height: 0
+    width: 0
+    transition: opacity 5s ease-in-out

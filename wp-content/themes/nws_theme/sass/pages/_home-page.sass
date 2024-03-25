@@ -1,0 +1,88 @@
+@use "../utils/_utils" as utils
+
+.main-home-page
+    text-align: center
+    +utils.flex(column, center, center)
+    +utils.responsive('laptop')
+        max-width: 70%
+
+    &__welcome-section
+        +utils.flex(column, center, center)
+
+        // &--title
+        &--text
+            margin-top: 2.5rem
+
+    &__about-section
+        margin-top: 17vh
+        +utils.flex(column, center, center)
+
+
+        // &--title
+        &--text
+            margin-top: 3rem
+
+    &__pictures-section
+        margin-top: 20vh
+        +utils.flex(column, center, center)
+
+
+        // &--title
+        &--text
+            margin-top: 3rem
+
+        &--image
+            margin-top: 3rem
+            margin-bottom: 3rem
+            max-width: 80%
+            +utils.responsive('litle-tablet')
+                max-width: 50%
+
+        &--link
+            color: utils.$grey-blue
+            text-decoration: underline
+            text-underline-offset: 0.3rem
+            text-decoration-color: utils.$grey-blue
+
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$gold
+
+    &__events-section
+        margin-top: 17vh
+        +utils.flex(column, center, center)
+
+
+        // &--title
+        &--text
+            margin-top: 3rem
+            margin-bottom: 3rem
+
+        &--link
+            color: utils.$grey-blue
+            text-decoration: underline
+            text-underline-offset: 0.3rem
+            text-decoration-color: utils.$grey-blue
+
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$gold
+
+    &__contact-section
+        margin-top: 20vh
+        +utils.flex(column, center, center)
+
+        // &--title
+        &--text
+            margin-top: 3rem
+            margin-bottom: 3rem
+
+        &--link
+            color: utils.$grey-blue
+            text-decoration: underline
+            text-underline-offset: 0.3rem
+            text-decoration-color: utils.$grey-blue
+
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$gold

@@ -1,0 +1,32 @@
+@use "../utils/_utils" as utils
+
+.all-pictures-page
+    &__title
+        text-align: center
+
+    &__text
+        text-align: center
+        margin-top: 2.5rem
+
+    &__pictures-list
+        margin-top: 5rem
+        +utils.flex(column, center, center)
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, center, center)
+            flex-wrap: wrap
+
+    &__pictures-list-element
+        +utils.flex(column, center, center)
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, center, center)
+            flex-basis: calc(25% - 1rem)
+
+        &--link
+            text-align: center
+
+        &--picture
+            width: 100%
+            max-width: 90%
+            margin-bottom: 2rem
+
+

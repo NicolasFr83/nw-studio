@@ -1,0 +1,60 @@
+@use "../utils/_utils" as utils
+
+.footer
+    text-align: center
+    background-color: utils.$grey
+    margin-top: 15vh
+    color: black
+    +utils.flex(column, space-evenly, center)
+
+    &__contain
+        width: 100%
+        +utils.flex(column, space-evenly, center)
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, space-around, center)
+
+    &__logo
+        width: 10rem
+
+    &__socials
+        width: 10rem
+        +utils.flex(row, space-around, center)
+
+        &--svg
+            fill: black
+            width: 1rem
+
+    &__contact
+        margin-bottom: 3.5rem
+        +utils.responsive('litle-tablet')
+            margin-bottom: 0
+        
+    &__copyright
+        margin-top: 2.5rem
+        margin-bottom: 2.5rem
+        +utils.responsive('litle-tablet')
+            margin-top: 0
+
+.footer-contact-list
+    height: 7rem
+    +utils.flex(column, space-around, center)
+    +utils.responsive('litle-tablet')
+        height: 5rem
+
+    &__element
+        margin-top: 1.5rem
+        +utils.flex(column, space-around, center)
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, space-around, center)
+            margin-top: 0
+
+        &--svg
+            width: 1rem
+            fill: black
+            margin-bottom: 0.5rem
+            +utils.responsive('litle-tablet')
+                margin-right: 1rem
+                margin-bottom: 0
+
+        // &--info
+            

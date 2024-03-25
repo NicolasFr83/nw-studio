@@ -1,0 +1,49 @@
+@use "../utils/_utils" as utils
+
+.all-events-page
+
+    &__title
+        text-align: center
+
+    &__text
+        text-align: center
+        margin-top: 3.5rem
+        margin-bottom: 3.5rem
+
+    &__list
+        +utils.flex(column, space-around, center)
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, space-around, center)
+            flex-wrap: wrap
+
+.events-list-element
+    +utils.flex(column, space-around, center)
+    background-color: utils.$grey
+    color: black
+    width: 90%
+    border-radius: 1rem
+    padding: 1rem
+    margin-top: 2.5rem
+    +utils.responsive('litle-tablet')
+        flex-basis: calc(45% - 1rem)
+    +utils.responsive('laptop')
+        flex-basis: calc(35% - 1rem)
+
+    &__image
+        width: 100%
+        border-radius: 1rem
+
+    &__title
+        margin-top: 2.5rem
+        margin-bottom: 2.5rem
+        text-align: center
+
+    &__link
+        color: utils.$grey-blue
+        text-decoration: underline
+        text-underline-offset: 0.3rem
+        text-decoration-color: utils.$grey-blue
+
+        &:hover
+            color: utils.$gold
+            text-decoration-color: utils.$gold

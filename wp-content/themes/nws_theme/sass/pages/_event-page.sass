@@ -1,0 +1,35 @@
+@use "../utils/_utils" as utils
+
+.event-card
+    background-color: utils.$grey
+    color: black
+    +utils.flex(column, space-around, center)
+    width: 90%
+    border-radius: 1rem
+    padding: 1rem
+    +utils.responsive('litle-tablet')
+        width: 50%
+
+    &__image
+        width: 100%
+        border-radius: 1rem
+
+    &__title
+        margin-top: 2.5rem
+        margin-bottom: 2.5rem
+        text-align: center
+
+    &__text
+        max-width: 90%
+        text-align: center
+
+    &__link
+        margin-top: 2.5rem
+        color: utils.$grey-blue
+        text-decoration: underline
+        text-underline-offset: 0.3rem
+        text-decoration-color: utils.$grey-blue
+
+        &:hover
+            color: utils.$gold
+            text-decoration-color: utils.$gold

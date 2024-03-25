@@ -1,0 +1,13 @@
+@use "../utils/_utils" as utils
+    
+.main-picture-page
+    +utils.flex(column, center, center)
+
+    &__title
+        margin-bottom: 2.5rem
+
+    &__picture
+        width: 100%
+        max-width: 90%
+        +utils.responsive('laptop')
+            max-width: 70%

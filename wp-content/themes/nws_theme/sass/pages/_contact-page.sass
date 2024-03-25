@@ -1,0 +1,29 @@
+@use "../utils/_utils" as utils
+
+.contact-page
+
+    &__title
+        text-align: center
+
+    &__text
+        text-align: center
+        margin-top: 2.5rem
+
+    &__list
+        +utils.flex(column, space-around, center)
+
+.contact-page-list-element
+    +utils.flex(column, space-around, center)
+    margin-top: 5rem
+
+    &__svg
+        fill: utils.$grey
+        width: 1.5rem
+
+    &__type-info
+        margin-top: 1rem
+        margin-bottom: 1rem
+
+    &__info
+        &:hover
+            color: utils.$gold
